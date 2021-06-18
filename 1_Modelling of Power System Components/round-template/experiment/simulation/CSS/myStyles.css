@@ -1,0 +1,33 @@
+body{
+    background-color: #ffe8d6;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+footer{
+  background-color: #f9f6f7;
+}
+.exp-title{
+  color: #ffff;
+  font-size: 1.2rem;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+#info{
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  font-size: x-large;
+}
+#info:hover{
+  color:rgba(255, 255, 255, 0.5);
+}
+#result>p{
+  border: black;
+}
+#result>p>em>strong{
+    color: green;
+    border: solid black;
+}

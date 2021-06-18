@@ -1,0 +1,1 @@
+#### The aim of the experiment is to determine the stability analysis of primary Automatic Load Frequency Control (ALFC) of single area power system.
