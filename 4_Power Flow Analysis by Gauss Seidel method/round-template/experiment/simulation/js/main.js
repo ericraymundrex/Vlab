@@ -235,7 +235,7 @@ function calculate(){
             maxerror = 10;
             const dq = [];
             const dp = [];
-            while(maxerror >= accuracy && iter<=maxiter){
+            while(maxerror >= accuracy && iter<maxiter){
                 iter = iter+1;
                 for(i=0;i<nbus;i+=1){
                     let yv = new Complex(0,0);
@@ -295,7 +295,7 @@ function calculate(){
                 }
                 maxerror = Math.max(Math.max(...dp),Math.max(...dq));
                 if(iter == maxiter && maxerror > accuracy){
-                    alert("Warning"); 
+                    alert(`Warning: Did not converge after ${iter} iiterations`); 
                     converge = 0;
                 }
             }

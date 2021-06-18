@@ -25,10 +25,10 @@ const questionArray = [
         end:true
     }],
     [{
-        question:"Question 2",
+        question:"Use of Jacobian Matrix leads to less memory Requirements.",
         answer:{
-            a:"Correct",
-            b:"Incorrect"
+            a:"True",
+            b:"False"
         },
         correctAnswer:"a",
         reason:{
@@ -255,7 +255,7 @@ function calculate(){
             }
             let maxerror = 1,converge = 1,iter =0;
             const DP =[],DPV=[],DQ=[],DQV=[];
-            while(maxerror>=accuracy && iter<=maxiter){
+            while(maxerror>=accuracy && iter<maxiter){
                 iter+=1;
                 let id =-1,iv=-1;
                 for($n=0;$n<nbus;$n++){

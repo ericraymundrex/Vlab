@@ -50,6 +50,8 @@ const questionArray = [
         end:true
     }]
 ];
+let tries = 0;
+let shown = false;
 const helpModalEl = document.getElementById('helpModal');
 const helpModal = new bootstrap.Modal(helpModalEl);
 const questionModalEl = document.getElementById('questionModal');
@@ -190,7 +192,9 @@ function userAnswerCheck(){
     const ansVoltageError = 1-ansVoltage;
     const ret = {
         status:true,
-        code:0
+        code:0,
+        voltage:ansVoltage,
+        voltageError:ansVoltageError
     }
     if(!AnswerInRange(voltage,ansVoltage)){
         ret.status = false;
@@ -223,15 +227,31 @@ function updateValues(){
             simulation.magnitude = float(document.getElementById("magnitude").value)/100;
             const UAC = userAnswerCheck()
             if(UAC.status){
-                alert("Verified! The answers were within the permisible error range of 1%");
+                if(!shown){
+                    alert("Verified! The answers were within the permisible error range of 1%");
+                }
+                tries = 0;
+                shown = false;
                 next(true,1);
                 updateSvg();
                 const xVal = plotGraph(calculate())
                 postQuestion();
             }else if(UAC.code === 1){
+                tries+=1;
                 alert("The calculated steady state voltage is incorrect or not in the permisible error range of 1%.");
             }else if(UAC.code === 2){
                 alert("The calculated steady state voltage error is incorrect or not in the permisible error range of 1%.");
+                tries+=1;
+            }
+            if(!UAC.status && tries>=3){
+                let decision;
+                decision = confirm(`You have got it wrong ${tries} times, Would you like to look at the answers?`);
+                if(decision){
+                    document.getElementById("voltage").value = parseFloat(UAC.voltage.toFixed(3));
+                    document.getElementById("voltageError").value = parseFloat(UAC.voltageError.toFixed(3));    
+                    shown = true;
+                    updateValues();
+                }
             }
         }catch(err){
             alert("Something went wrong! Error has been logged in console.");
@@ -248,8 +268,8 @@ function clear(){
     };
     graph.data.datasets[0].data = [];
     graph.update();
-    document.getElementById("ssVoltage").textContent = "";
-    document.getElementById("ssError").textContext = "";
+    document.getElementById("ssVoltage").innerHTML = "";
+    document.getElementById("ssError").innerHTML = "";
 }
 function postQuestion(){
     document.getElementById("postQuestion").hidden = false;

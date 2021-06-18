@@ -1,5 +1,5 @@
 ### INTRODUCTION<br>
-#### Power system is an electrical network that consists of mainly three processes namely generation, transmission, distribution of electric power from utility to commercials. 
+#### Power system is an electrical network that consists of mainly three processes namely generation, transmission, distribution of electric power from utility to commercials[1].
 #### To define the functioning of the power system, a modelling of these components is essential. Hence the per unit quantities are used for simplified modelling of the power system and for better understanding.
 #### The per unit representation is preferred in power flow analysis, short circuit analysis and various other domains in Power systems. Some of the advantages in per unit system are:
 1. The possibility of wrong selection between phase and line quantities in a three-phase system is highly reduced.
@@ -10,7 +10,7 @@
 <br>
 
 ### CONCEPT<br>
-#### Electric power system is the high voltage electrical grid, which consists of all electrical components.Electric power system has mainly categorized into three divisions.
+#### Electric power system is the high voltage electrical grid, which consists of all electrical components[3]. Electric power system has mainly categorized into three divisions.
 
 1. Generating station:
 –	Electric energy is generated in large hydro-electric, thermal and nuclear stations etc. 

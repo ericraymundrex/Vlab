@@ -21,6 +21,16 @@ table{
 th{
     text-align: center;
 }
+.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: lightgrey;
+}
+.help-body{
+    padding-top: 0;
+}
 .modal td{
     text-align:left;
 }

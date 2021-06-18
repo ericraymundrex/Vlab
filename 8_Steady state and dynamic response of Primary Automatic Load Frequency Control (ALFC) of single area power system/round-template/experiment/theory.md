@@ -4,7 +4,7 @@
 1. control the system frequency 
 2. control the inter-state real power 
 3. share the load among the operated synchronous generating units based on their regulation.
-#### The input signal of primary ALFC is the frequency deviation ∆f of power system obtained in Energy management center. These error signals ∆f is amplified and transformed to a real power signal, that controls the steam/water inlet at the turbines of thermal/hydro synchronous generators. 
+#### The input signal of primary ALFC is the frequency deviation ∆f of power system obtained in Energy management center. These error signals ∆f is amplified and transformed to a real power signal, that controls the steam/water inlet at the turbines of thermal/hydro synchronous generators [4]. 
 <br>
 
 ### CONCEPT<br>

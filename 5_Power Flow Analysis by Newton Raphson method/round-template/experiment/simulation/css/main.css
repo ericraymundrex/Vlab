@@ -9,6 +9,16 @@ hr{
     color: #ffff;
     font-size: 1.2rem;
 }
+.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: lightgrey;
+}
+.help-body{
+    padding-top: 0;
+}
 body{
     background-color: #ffe8d6;
 }

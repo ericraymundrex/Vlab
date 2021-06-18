@@ -212,7 +212,7 @@ function calculate(){
             }
             const  m = 2*nbus-ng-2*ns , A=[],DC=[],J=[];
             let maxerror = 1,converge = 1,iter =0,DX=[];
-            while(maxerror>=accuracy && iter<=maxiter){
+            while(maxerror>=accuracy && iter<maxiter){
                 while(A.length > 0)A.pop();
                 for($i=0;$i<m;$i++){
                     const Atemp = [];

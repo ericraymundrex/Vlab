@@ -1,12 +1,12 @@
 ### INTRODUCTION<br>
-#### In reactance diagram, the components are represented by its reactance value and it is the simplified equivalent circuit of power system. The reactance diagram can be framed using the impedance diagram by neglecting all resistive components.
+#### In reactance diagram, the components are represented by its reactance value and it is the simplified equivalent circuit of power system. The reactance diagram can be framed using the impedance diagram by neglecting all resistive components [2].
 
 <br>
 
 ### CONCEPT<br>
 #### This experiment mainly focuses on how to draw the reactance diagram from a given single line diagram of a power system network. 
 #### The single line diagram includes synchronous generators, synchronous motors, transmission line, transformer and load. 
-#### The per-unit reactance of each component has to be calculated depending on the base MVA, base kV. 
+#### The per-unit reactance of each component has to be calculated depending on the base MVA, base kV [1]. 
 
 #### The following approximations have been made while drawing the reactance diagram.
 1. The neutral reactance is neglected.

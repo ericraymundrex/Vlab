@@ -1,6 +1,16 @@
 body{
     background-color: #ffe8d6;
 }
+.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: lightgrey;
+  z-index: 5;
+}
+.help-body{
+  padding-top: 0;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

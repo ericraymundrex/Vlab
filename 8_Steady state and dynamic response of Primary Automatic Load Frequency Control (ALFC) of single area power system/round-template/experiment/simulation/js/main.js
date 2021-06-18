@@ -50,6 +50,8 @@ const questionArray = [
         end:true
     }]
 ];
+let tries = 0;
+let shown = false;
 const helpModalEl = document.getElementById('helpModal');
 const helpModal = new bootstrap.Modal(helpModalEl);
 const questionModalEl = document.getElementById('questionModal');
@@ -184,7 +186,9 @@ function userAnswerCheck(){
     const ansFrequencyError = ansFrequency-getFNom();
     const ret = {
         status:true,
-        code:0
+        code:0,
+        frequency:ansFrequency,
+        frequencyError:ansFrequencyError
     }
     if(!AnswerInRange(frequency,ansFrequency)){
         ret.status = false;
@@ -211,6 +215,11 @@ function updateValues(){
             calculate();
             const UAC = userAnswerCheck();
             if(UAC.status){
+                if(!shown){
+                    alert("Verified! The answers were within the permisible error range of 1%");
+                }
+                tries = 0;
+                shown = false;
                 next(true,1);
                 if(Number(document.getElementById("startTime").value) > Number(document.getElementById("endTime").value)){
                     document.getElementById("endTime").value = document.getElementById("startTime").value;
@@ -222,9 +231,21 @@ function updateValues(){
                 updateSvg();
                 plotGraph(getValue());
             }else if(UAC.code === 1){
+                tries+=1;
                 alert("The calculated steady state frequency is incorrect or not in the permisible error range of 1%.");
             }else if(UAC.code === 2){
+                tries+=1;
                 alert("The calculated steady state frequency error is incorrect or not in the permisible error range of 1%.");
+            }
+            if(!UAC.status && tries>=3){
+                let decision;
+                decision = confirm(`You have got it wrong ${tries} times, Would you like to look at the answers?`);
+                if(decision){
+                    document.getElementById("frequency").value = parseFloat(UAC.frequency.toFixed(3));
+                    document.getElementById("frequencyError").value = parseFloat(UAC.frequencyError.toFixed(3));    
+                    shown = true;
+                    updateValues();
+                }
             }
         }catch(err){
             alert("Something went wrong! Error has been logged in console.");

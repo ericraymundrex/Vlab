@@ -9,7 +9,5 @@
 
 #### 5. Computer Techniques in Power System Analysis by Pai M.A. and Dheeman Chatterjee, Mc Graw Hill Education (India) Private Limited, New Delhi, 2016.
 
-#### 6. Power System Analysis by Hadi Saadat, Mc Graw Hill Education (India) Private Limited, New Delhi, 1999.
-
-#### 7. Modern Power System Analysis with MATLAB Applications by R.Jagtheesan and K.Vijayakumar, Pearson 2020.
+#### 6. Modern Power System Analysis with MATLAB Applications by R.Jagtheesan and K.Vijayakumar, Pearson 2020.
 

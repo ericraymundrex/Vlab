@@ -12,8 +12,8 @@
 <body>
     <nav class="nav-bar navbar-dark mb-5" style="background-color: #ff971d;">
         <div class="container-fluid d-flex justify-content-between">
-            <img class="navbar-brand img-fluid" src="images/srmLogo.png"/>
-            <span class="navbar-text mx-md-auto">
+            <a href="https://www.srmist.edu.in/" target="_blank"><img width="176px" height="59px" class="navbar-brand my-2 p-0" src="images/srmLogo.png"/></a>
+            <span class="navbar-text text-center">
                 <strong class="exp-title">Power Flow Analysis by Fast Decoupled Power Flow method</strong>
             </span>
             <button type="button" class="my-auto info" data-bs-toggle="modal" data-bs-target="#helpModal" title="Help"><i class="bi bi-info-circle"></i></button>
@@ -59,10 +59,10 @@
                     <h5 class="modal-title">Help</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body help-body">
                     <strong>To open this menu again click on <i class="bi bi-info-circle"></i> on the top right.</strong><br><br>
                     <div>
-                        Formulas needed for the execution of power flow analysis using Direct Inspection method<br>
+                        Formulae needed for the execution of power flow analysis using Direct Inspection method<br>
                         <img class="img-fluid" src="./images/Exp6_Eqn1.png" alt="Formula 1"><br>
                         <img class="img-fluid" src="./images/Exp6_Eqn2.png" alt="Formula 2"><br><br>
                         <strong>Losses</strong><br>
@@ -73,7 +73,7 @@
                     <br>
                     <br>
                     <table class="table table-striped">
-                        <thead>
+                        <thead class="sticky">
                             <tr>
                                 <th scope="col">
                                     Field   
@@ -276,7 +276,7 @@
         </div>
     </div>
     <div id="sectionOne" class="container mb-3">
-        <h2>Network and Line Parameters</h2>
+        <h2>Network and Simulation Parameters</h2>
         <div id="standard-values" class="row">
             <div class="col-md-6 col-lg-2">
                 <label class="form-label" for="busTot">Number of buses</label>
